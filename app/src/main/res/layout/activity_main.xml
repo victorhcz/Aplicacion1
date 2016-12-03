@@ -1,102 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_main2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.victorhugo.myapplication1.MainActivity">
-    <ScrollView
+    android:background="#3b5998"
+    tools:context="com.example.victorhugo.myapplication1.Main2Activity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="166dp"
+            app:srcCompat="@drawable/LogoFace"
+            android:id="@+id/imageView"
+            android:layout_weight="0.07"
+            android:scaleType="fitXY" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="REGISTRO ALUMNOS"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:textSize="25sp"
-                android:layout_margin="40dp"/>
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:padding="5dp"
-                    android:layout_marginLeft="30dp"
-                    android:scaleType="fitXY"
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Victor Hugo"
-                        android:textSize="30sp"
-                        android:layout_marginLeft="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lopez"
-                        android:textSize="30dp"
-                        android:layout_marginLeft="10dp"/>
-                </LinearLayout>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="Estudiante"
-                android:textSize="20sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
-                android:text="22 años"
-                android:textSize="20sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Android Dev"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="iOSDev"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"/>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:text="2016"/>
-
+                android:gravity="center_horizontal"
+                android:text="English . Portugues . Más..."
+                android:textColor="#99cccc" />
         </LinearLayout>
-    </ScrollView>
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/editID"
+                android:textColor="#99cccc"
+                android:text="Correo electrónico o teléfono "/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/editContrena"
+                android:textColor="#99cccc"
+                android:text="Contraseña"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <Button
+                android:text="Iniciar SESIÓN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#99cccc"
+                android:id="@+id/buttonIniciar"
+                android:layout_weight="0.07"
+                android:backgroundTint="#4e69a2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="¿Olvidaste tu contraseña?"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#3b5998"
+            android:weightSum="1">
+            <Button
+                android:text="CREAR CUENTA DE FACEBOOK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:id="@+id/buttonCrear"
+                android:layout_weight="0.07"
+                android:backgroundTint="#3b5998" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
